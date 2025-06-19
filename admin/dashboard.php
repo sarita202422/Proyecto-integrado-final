@@ -33,9 +33,10 @@ $result = $conn->query("SELECT * FROM proyectos ORDER BY created_at DESC");
       <a href="<?php echo $p['url_github']; ?>" target="_blank">GitHub</a><br>
       <a href="<?php echo $p['url_produccion']; ?>" target="_blank">Ver online</a><br>
       <a href="edit.php?id=<?php echo $p['id']; ?>">Editar</a> |
-      <a href="delete.php?id=<?php echo $p['id']; ?>">Eliminar</a>
+     <a href="delete.php?id=<?= $p['id'] ?>" onclick="return confirmarEliminacion()">Eliminar</a>
       <hr>
     </div>
   <?php endwhile; ?>
+  <script src="../assets/js/script.js"></script>
 </body>
 </html>

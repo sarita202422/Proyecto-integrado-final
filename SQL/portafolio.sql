@@ -17,5 +17,5 @@ CREATE TABLE proyectos (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Usuario de prueba (usuario: admin, contraseña: 123456)
-INSERT INTO users (username, password) VALUES ('admin', MD5('123456'));
+-- Usuario de prueba (usuario: admin, contraseña: 123455)
+INSERT INTO users (username, password) VALUES ('admin', MD5('12345'));

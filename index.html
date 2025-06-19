@@ -3,37 +3,54 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Portafolio</title>
+    <title>Portafolio Personal</title>
 </head>
 
 <body>
-    <h1>Proyectos</h1>
-    <div id="contenedor"></div>
-
-    <br>
-    <a href="admin/login.php">Iniciar sesión como administrador</a>
+    <h1>Mis Proyectos</h1>
+    <a href="admin/login.php" style="position: absolute; top: 20px; right: 20px;">Iniciar sesión</a>
+    <div id="proyectos"></div>
 
     <script>
-        fetch('api/proyectos.php')
-            .then(response => response.json())
-            .then(data => {
-                const contenedor = document.getElementById('contenedor');
-                data.forEach(proyecto => {
-                    const div = document.createElement('div');
-                    div.innerHTML = `
-            <h2>${proyecto.titulo}</h2>
-            <p>${proyecto.descripcion}</p>
-            <img src="uploads/${proyecto.imagen}" width="300"><br>
-            <a href="${proyecto.url_github}" target="_blank">GitHub</a><br>
-            <a href="${proyecto.url_produccion}" target="_blank">Ver online</a>
-            <hr>
+        async function cargarProyectos() {
+            const contenedor = document.getElementById("proyectos");
+            contenedor.innerHTML = "Cargando...";
+
+            try {
+                const res = await fetch("api/proyectos.php");
+
+                if (!res.ok) {
+                    const errorData = await res.json();
+                    throw new Error(errorData.error || "Error desconocido");
+                }
+
+                const proyectos = await res.json();
+
+                if (proyectos.length === 0) {
+                    contenedor.innerHTML = "<p>No hay proyectos para mostrar.</p>";
+                    return;
+                }
+
+                contenedor.innerHTML = "";
+                proyectos.forEach(p => {
+                    contenedor.innerHTML += `
+            <div>
+              <h3>${p.titulo}</h3>
+              <p>${p.descripcion}</p>
+              ${p.url_github ? `<a href="${p.url_github}" target="_blank">GitHub</a>` : ''}
+              ${p.url_produccion ? ` | <a href="${p.url_produccion}" target="_blank">Ver online</a>` : ''}
+              ${p.imagen ? `<br><img src="uploads/${p.imagen}" alt="${p.titulo}" width="200"><br>` : ''}
+              <hr>
+            </div>
           `;
-                    contenedor.appendChild(div);
                 });
-            })
-            .catch(err => {
-                document.getElementById('contenedor').innerText = "Error al cargar proyectos.";
-            });
+
+            } catch (error) {
+                contenedor.innerHTML = `<p style="color:red;">Error al cargar proyectos: ${error.message}</p>`;
+            }
+        }
+
+        cargarProyectos();
     </script>
 </body>
 
