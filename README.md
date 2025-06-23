@@ -19,5 +19,5 @@ Durante el desarrollo del proyecto, se utilizó inteligencia artificial como asi
 
 La inteligencia artificial usada fue ChatGPT
 
-#URL del proyecto desplegado en servidor: https://teclab.uct.cl/~sarita.marinao/proyectos/Proyecto-integrado-final/index.html
+# URL del proyecto desplegado en servidor: https://teclab.uct.cl/~sarita.marinao/proyectos/Proyecto-integrado-final/index.html
 
