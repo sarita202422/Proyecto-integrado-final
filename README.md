@@ -16,6 +16,7 @@ Durante el desarrollo del proyecto, se utilizó inteligencia artificial como asi
 -Diseñar estilos visuales modernos mediante sugerencias de CSS personalizados.
 
 -Organizar la estructura del proyecto y separar correctamente archivos (frontend/backend).
+
 La inteligencia artificial usada fue ChatGPT
 
 #URL del proyecto desplegado en servidor: https://teclab.uct.cl/~sarita.marinao/proyectos/Proyecto-integrado-final/index.html
