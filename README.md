@@ -17,6 +17,11 @@ Durante el desarrollo del proyecto, se utilizó inteligencia artificial como asi
 
 -Organizar la estructura del proyecto y separar correctamente archivos (frontend/backend).
 
+En este proyecto, la Inteligencia Artificial fue una herramienta clave durante todo el proceso de desarrollo.
+Utilicé IA para generar la mayor parte del código base, tanto del backend como del frontend, y también para estructurar el sistema completo.
+Sin embargo, yo me encargué de adaptar ese código al contexto del proyecto, 
+corregir errores, integrarlo en una sola plataforma funcional y asegurarme de comprender el funcionamiento de cada parte.
+
 La inteligencia artificial usada fue ChatGPT
 
 # URL del proyecto desplegado en servidor: https://teclab.uct.cl/~sarita.marinao/proyectos/Proyecto-integrado-final/index.html
