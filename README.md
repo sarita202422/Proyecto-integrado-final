@@ -9,8 +9,6 @@ Durante el desarrollo del proyecto, se utilizó inteligencia artificial como asi
 
 -Aclarar conceptos de HTML, CSS, JavaScript, PHP y API REST.
 
--Generar y corregir código de forma rápida y guiada.
-
 -Comentar archivos para facilitar la comprensión y futura exposición del proyecto.
 
 -Diseñar estilos visuales modernos mediante sugerencias de CSS personalizados.
