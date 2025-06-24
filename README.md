@@ -2,7 +2,7 @@
 proyecto funcional de portafolio personal que implementa un sistema CRUD completo con integración de una API REST y conexión a base de datos MySQL
 
 # Tecnologias utilizadas
-Vscode, HTML, CSS, JavaScript, GitHub, PHPMyAdmin
+Vscode, HTML, CSS, JavaScript, PHP, GitHub, PHPMyAdmin
 
 # 🤖 Uso de Inteligencia Artificial en el Proyecto
 Durante el desarrollo del proyecto, se utilizó inteligencia artificial como asistente de apoyo técnico para:
